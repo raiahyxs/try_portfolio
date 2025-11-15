@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'bg': '#050505',
+              'second-bg': '#0f0f0f',
+              'text': '#e0e0e0',
+              'main': '#00ffee',
+              'main-dark': '#00ccdd'
+            },
+            boxShadow: {
+              'neon': '0 0 10px rgba(0, 255, 255, 0.6), 0 0 20px rgba(0, 255, 255, 0.4), 0 0 30px rgba(0, 255, 255, 0.2)',
+              'neon-dark': '0 0 8px rgba(0, 204, 221, 0.5), 0 0 16px rgba(0, 204, 221, 0.3)'
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-bg text-text antialiased">
+    
+    <header class="fixed top-0 left-0 w-full py-4 px-[8%] bg-black/40 backdrop-blur-lg flex justify-between items-center z-50 shadow-lg">
+        <a href="#home" class="logo-font text-3xl lg:text-4xl text-text font-extrabold cursor-pointer transition-all duration-500 ease-in-out hover:scale-105 hover:text-main">Rhealyn
+            <span class="text-main shadow-lg">Vasquez</span>
+        </a>
+
+        <div id="menu-icon" class="text-4xl text-main cursor-pointer lg:hidden hover:text-white transition-colors w-10 h-10 flex flex-col justify-center items-center gap-1.5">
+            <span class="bar block w-8 h-1 bg-main rounded-md transition-all duration-300 ease-in-out"></span>
+            <span class="bar block w-8 h-1 bg-main rounded-md transition-all duration-300 ease-in-out"></span>
+            <span class="bar block w-8 h-1 bg-main rounded-md transition-all duration-300 ease-in-out"></span>
+        </div>
+
+        <nav class="navbar absolute top-full left-0 w-full bg-black/90 lg:bg-transparent lg:static lg:w-auto hidden lg:flex flex-col lg:flex-row gap-4 text-center py-4 lg:py-0 transition-all duration-300 ease-in-out">
+            <a href="#home" class="active text-lg text-text mx-4 font-medium transition-all duration-300 ease-in-out relative group overflow-hidden py-2 lg:py-0">
+                <b>Home</b>
+                <span class="hover-underline absolute bottom-0 left-0 w-full h-0.5 bg-main transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out"></span>
+            </a>
+            <a href="#about" class="text-lg text-text mx-4 font-medium transition-all duration-300 ease-in-out relative group overflow-hidden py-2 lg:py-0">
+                <b>About</b>
+                <span class="hover-underline absolute bottom-0 left-0 w-full h-0.5 bg-main transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out"></span>
+            </a>
+            <a href="#skills" class="text-lg text-text mx-4 font-medium transition-all duration-300 ease-in-out relative group overflow-hidden py-2 lg:py-0">
+                <b>Skills</b>
+                <span class="hover-underline absolute bottom-0 left-0 w-full h-0.5 bg-main transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out"></span>
+            </a>
+            <a href="#portfolio" class="text-lg text-text mx-4 font-medium transition-all duration-300 ease-in-out relative group overflow-hidden py-2 lg:py-0">
+                <b>Portfolio</b>
+                <span class="hover-underline absolute bottom-0 left-0 w-full h-0.5 bg-main transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out"></span>
+            </a>
+            <a href="#contact" class="text-lg text-text mx-4 font-medium transition-all duration-300 ease-in-out relative group overflow-hidden py-2 lg:py-0">
+                <b>Contact</b>
+                <span class="hover-underline absolute bottom-0 left-0 w-full h-0.5 bg-main transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out"></span>
+            </a>
+        </nav>
+    </header>
+
+    <section class="home min-h-screen flex flex-col-reverse lg:flex-row items-center justify-center gap-16 lg:gap-32 px-[8%] pt-28 pb-12" id="home">
+        <div class="home-content flex flex-col items-center lg:items-start text-center lg:text-left justify-center mt-12 animate-fade-in" style="animation-delay: 0.2s;">
+            <h1 class="text-5xl lg:text-7xl font-bold mt-6 leading-tight text-text">Hi, It's<span class="text-main ml-2">Rhealyn</span></h1>
+            <h3 class="text-animation text-3xl lg:text-4xl font-semibold my-4">I'm a <span class="min-w-[280px] lg:min-w-[350px]"></span></h3>
+            <p class="text-base lg:text-lg font-light leading-relaxed max-w-lg mb-8 text-gray-300">
+                As a creative problem solver, I specialize in building modern 
+                websites and applications that are both functional and 
+                visually appealing. With a strong foundation in front-end 
+                development and a keen eye for design, I strive to make 
+                the web a better place, one project at a time.
+            </p>
+
+            <div class="social-icons my-8 flex gap-4">
+                <a href="https://www.facebook.com" class="inline-flex justify-center items-center w-12 h-12 bg-transparent border-2 border-main rounded-full text-main transition-all duration-300 ease-in-out hover:text-black hover:scale-110 hover:shadow-neon hover:bg-main"><i class="fab fa-facebook-f text-lg"></i></a>
+                <a href="https://www.instagram.com" class="inline-flex justify-center items-center w-12 h-12 bg-transparent border-2 border-main rounded-full text-main transition-all duration-300 ease-in-out hover:text-black hover:scale-110 hover:shadow-neon hover:bg-main"><i class="fab fa-instagram text-lg"></i></a>
+                <a href="https://www.tiktok.com" class="inline-flex justify-center items-center w-12 h-12 bg-transparent border-2 border-main rounded-full text-main transition-all duration-300 ease-in-out hover:text-black hover:scale-110 hover:shadow-neon hover:bg-main"><i class="fab fa-tiktok text-lg"></i></a>
+                <a href="https://github.com" class="inline-flex justify-center items-center w-12 h-12 bg-transparent border-2 border-main rounded-full text-main transition-all duration-300 ease-in-out hover:text-black hover:scale-110 hover:shadow-neon hover:bg-main"><i class="fab fa-github text-lg"></i></a>
+            </div>
+
+            <div class="btn-group flex items-center gap-6">
+                <a href="#" class="btn inline-block py-3 px-8 bg-main shadow-neon rounded-full text-lg text-black border-2 border-transparent font-semibold transition-all duration-300 ease-in-out cursor-pointer hover:scale-105 hover:shadow-neon-dark hover:bg-main-dark"><b>Hire Me</b></a>
+                <a href="#contact" class="btn inline-block py-3 px-8 bg-transparent text-main border-2 border-main rounded-full text-lg font-semibold transition-all duration-300 ease-in-out cursor-pointer hover:scale-105 hover:shadow-neon hover:bg-main hover:text-black"><b>Download CV</b></a>
+            </div>
+        </div>
+
+        <div class="home-img mt-16 lg:mt-0 animate-fade-in" style="animation-delay: 0.5s;">
+            <img src="pictures/rhealyn.png" alt="Rhealyn Vasquez" class="relative w-[60vw] md:w-[40vw] lg:w-[28vw] rounded-full shadow-neon cursor-pointer transition-all duration-400 ease-in-out hero-image-pulse" onerror="this.onerror=null; this.src='https://placehold.co/400x400/050505/00ffee?text=Rhealyn';">
+        </div>
+    </section>
+
+    <section id="about" class="about min-h-screen flex flex-col lg:flex-row items-center justify-center gap-16 px-[8%] py-24 bg-second-bg text-text">
+        <div class="about-img flex-1 flex justify-center items-center animate-slide-in" style="animation-delay: 0.2s;">
+            <img src="pictures/rhealyn.png" alt="About Me Image" class="w-full max-w-sm md:max-w-md lg:max-w-lg rounded-full shadow-neon transition-all duration-400 ease-in-out hover:shadow-neon-dark" onerror="this.onerror=null; this.src='https://placehold.co/400x400/0f0f0f/00ffee?text=About+Me';">
+        </div>
+        <div class="about-content flex-2 text-center lg:text-left mt-10 lg:mt-0 animate-fade-in" style="animation-delay: 0.4s;">
+            <h2 class="text-5xl lg:text-7xl font-bold mb-4 text-main leading-tight">About <span class="text-text">Me</span></h2>
+            <h3 class="text-animation text-3xl lg:text-4xl font-semibold my-4">I'm a <span class="min-w-[280px] lg:min-w-[350px]"></span></h3>
+            <p class="text-base lg:text-lg font-light leading-relaxed max-w-xl mb-6 text-gray-300">
+                I am a passionate web developer with expertise in front-end technologies. 
+                My journey in coding started with HTML and CSS, and I quickly grew to 
+                love JavaScript and modern web frameworks. I believe in creating 
+                user-friendly, responsive, and accessible websites that leave a 
+                lasting impression.
+            </p>
+            <p class="text-base lg:text-lg font-light leading-relaxed max-w-xl mb-8 text-gray-300">
+                I believe in continuous learning and enjoy exploring new tools and technologies. 
+                Collaboration and communication are key to delivering successful projects, 
+                and I’m always excited to tackle new challenges.
+            </p>
+            <a class="btn inline-block py-3 px-8 bg-main shadow-neon rounded-full text-lg text-black border-2 border-transparent font-semibold transition-all duration-300 ease-in-out cursor-pointer hover:scale-105 hover:shadow-neon-dark hover:bg-main-dark">Read More!</a>
+        </div>
+    </section>
+    
+    <section class="skills min-h-screen flex justify-center items-center bg-gradient-to-b from-bg to-second-bg text-text p-6 lg:p-12" id="skills">
+        <div id="skills-container-animated" class="skills-container w-full max-w-7xl p-8 md:p-12 rounded-3xl bg-white/10 shadow-2xl backdrop-blur-lg border border-main/20 animate-fade-in">
+            <h1 class="text-center text-5xl lg:text-7xl font-bold text-main/90 mb-12 animate-slide-in" style="animation-delay: 0.2s;">My Skills</h1>
+            
+            <div class="skills-section flex flex-col lg:flex-row justify-between gap-10">
+                
+                <div class="technical-skills flex-1 p-8 rounded-2xl bg-black/60 shadow-lg text-center border border-main/10 animate-fade-in" style="animation-delay: 0.4s;">
+                    <h2 class="text-2xl lg:text-3xl font-semibold mb-6 text-main animate-slide-in" style="animation-delay: 0.6s;">Technical Skills</h2>
+                    
+                    <div class="skill mb-6 text-left transition-transform duration-300 hover:scale-[1.02]">
+                        <span class="text-lg lg:text-xl font-medium mb-2 block">HTML <span class="float-right text-main">80%</span></span>
+                        <div class="progress-bar relative w-full h-4 lg:h-5 rounded-full overflow-hidden" style="--percent: 80%;"></div>
+                    </div>
+                    <div class="skill mb-6 text-left transition-transform duration-300 hover:scale-[1.02]">
+                        <span class="text-lg lg:text-xl font-medium mb-2 block">CSS <span class="float-right text-main">85%</span></span>
+                        <div class="progress-bar relative w-full h-4 lg:h-5 rounded-full overflow-hidden" style="--percent: 85%;"></div>
+                    </div>
+                    <div class="skill mb-6 text-left transition-transform duration-300 hover:scale-[1.02]">
+                        <span class="text-lg lg:text-xl font-medium mb-2 block">JavaScript <span class="float-right text-main">80%</span></span>
+                        <div class="progress-bar relative w-full h-4 lg:h-5 rounded-full overflow-hidden" style="--percent: 80%;"></div>
+                    </div>
+                    <div class="skill mb-6 text-left transition-transform duration-300 hover:scale-[1.02]">
+                        <span class="text-lg lg:text-xl font-medium mb-2 block">PYTHON<span class="float-right text-main">89%</span></span>
+                        <div class="progress-bar relative w-full h-4 lg:h-5 rounded-full overflow-hidden" style="--percent: 89%;"></div>
+                    </div>
+                </div>
+        
+                <div class="professional-skills flex-1 p-8 rounded-2xl bg-black/60 shadow-lg text-center border border-main/10 animate-fade-in" style="animation-delay: 0.6s;">
+                    <h2 class="text-2xl lg:text-3xl font-semibold mb-6 text-main animate-slide-in" style="animation-delay: 0.8s;">Professional Skills</h2>
+                    <div class="flex flex-wrap justify-around gap-6">
+                        
+                        <div class="circular-skill text-center m-2 animate-fade-in" style="--angle: calc(90 * 3.6deg); animation-delay: 1s;">
+                            <div class="circle relative w-28 h-28 lg:w-32 lg:h-32 rounded-full flex items-center justify-center transition-all duration-300 ease-in-out hover:shadow-neon hover:scale-105">
+                                <div class="box w-20 h-20 lg:w-24 lg:h-24 bg-black/80 rounded-full flex items-center justify-center text-lg lg:text-xl font-bold text-white shadow-inner">90%</div>
+                            </div>
+                            <p class="mt-4 text-base font-medium">Teamwork</p>
+                        </div>
+                        <div class="circular-skill text-center m-2 animate-fade-in" style="--angle: calc(80 * 3.6deg); animation-delay: 1.1s;">
+                            <div class="circle relative w-28 h-28 lg:w-32 lg:h-32 rounded-full flex items-center justify-center transition-all duration-300 ease-in-out hover:shadow-neon hover:scale-105">
+                                <div class="box w-20 h-20 lg:w-24 lg:h-24 bg-black/80 rounded-full flex items-center justify-center text-lg lg:text-xl font-bold text-white shadow-inner">80%</div>
+                            </div>
+                            <p class="mt-4 text-base font-medium">Creativity</p>
+                        </div>
+                        <div class="circular-skill text-center m-2 animate-fade-in" style="--angle: calc(70 * 3.6deg); animation-delay: 1.2s;">
+                            <div class="circle relative w-28 h-28 lg:w-32 lg:h-32 rounded-full flex items-center justify-center transition-all duration-300 ease-in-out hover:shadow-neon hover:scale-105">
+                                <div class="box w-20 h-20 lg:w-24 lg:h-24 bg-black/80 rounded-full flex items-center justify-center text-lg lg:text-xl font-bold text-white shadow-inner">70%</div>
+                            </div>
+                            <p class="mt-4 text-base font-medium">Communication</p>
+                        </div>
+                        <div class="circular-skill text-center m-2 animate-fade-in" style="--angle: calc(55 * 3.6deg); animation-delay: 1.3s;">
+                            <div class="circle relative w-28 h-28 lg:w-32 lg:h-32 rounded-full flex items-center justify-center transition-all duration-300 ease-in-out hover:shadow-neon hover:scale-105">
+                                <div class="box w-20 h-20 lg:w-24 lg:h-24 bg-black/80 rounded-full flex items-center justify-center text-lg lg:text-xl font-bold text-white shadow-inner">55%</div>
+                            </div>
+                            <p class="mt-4 text-base font-medium">Project Management</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio min-h-screen flex flex-col justify-center items-center text-center gap-12 py-32 px-[8%] bg-gradient-to-r from-bg to-second-bg text-text" id="portfolio">
+        <div class="portfolio-container max-w-6xl w-full">
+            <h1 class="text-5xl lg:text-7xl font-bold text-main mb-8 animate-slide-in" style="animation-delay: 0.2s;">My <span class="text-text">Projects</span></h1>
+            <p class="text-lg leading-relaxed mb-16 font-light max-w-3xl mx-auto text-gray-300 animate-fade-in" style="animation-delay: 0.4s;">Here are some of the amazing projects I have worked on. Click on each project to learn more.</p>
+            
+            <div class="projects flex flex-wrap justify-center gap-12">
+                <div class="project-card relative w-full md:w-[45%] lg:w-[30%] bg-black/70 rounded-2xl overflow-hidden shadow-lg transition-all duration-400 ease-in-out hover:scale-105 hover:shadow-neon hover:border-2 hover:border-main animate-fade-in" style="animation-delay: 0.6s;">
+                    <a href="#">
+                        <img src="pictures/P1.jpg" alt="Project 1" class="project-img w-full h-52 object-cover transition-all duration-400 ease-in-out brightness-75 hover:brightness-100 hover:scale-110" onerror="this.onerror=null; this.src='https://placehold.co/600x400/1a1a1a/00ffee?text=Project+1';">
+                        <div class="project-info absolute bottom-0 w-full p-6 bg-black/80 text-left transition-all duration-400 ease-in-out group-hover:bg-black/90">
+                            <h3 class="text-2xl font-semibold mb-2 text-main">Project 1</h3>
+                            <p class="text-sm font-light leading-relaxed mb-4 text-gray-400">A responsive website for a local business, focused on user experience.</p>
+                            <div class="btn inline-block py-2 px-6 bg-main shadow-lg shadow-main/50 rounded-full text-sm text-black border-2 border-transparent font-semibold transition-all duration-300 ease-in-out cursor-pointer hover:scale-110 hover:bg-black hover:text-main hover:shadow-neon">View Project</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="project-card relative w-full md:w-[45%] lg:w-[30%] bg-black/70 rounded-2xl overflow-hidden shadow-lg transition-all duration-400 ease-in-out hover:scale-105 hover:shadow-neon hover:border-2 hover:border-main animate-fade-in" style="animation-delay: 0.8s;">
+                    <a href="#">
+                        <img src="pictures/P2.jpg" alt="Project 2" class="project-img w-full h-52 object-cover transition-all duration-400 ease-in-out brightness-75 hover:brightness-100 hover:scale-110" onerror="this.onerror=null; this.src='https://placehold.co/600x400/1a1a1a/00ffee?text=Project+2';">
+                        <div class="project-info absolute bottom-0 w-full p-6 bg-black/80 text-left transition-all duration-400 ease-in-out group-hover:bg-black/90">
+                            <h3 class="text-2xl font-semibold mb-2 text-main">Project 2</h3>
+                            <p class="text-sm font-light leading-relaxed mb-4 text-gray-400">An e-commerce platform designed to enhance shopping convenience.</p>
+                            <div class="btn inline-block py-2 px-6 bg-main shadow-lg shadow-main/50 rounded-full text-sm text-black border-2 border-transparent font-semibold transition-all duration-300 ease-in-out cursor-pointer hover:scale-110 hover:bg-black hover:text-main hover:shadow-neon">View Project</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="project-card relative w-full md:w-[45%] lg:w-[30%] bg-black/70 rounded-2xl overflow-hidden shadow-lg transition-all duration-400 ease-in-out hover:scale-105 hover:shadow-neon hover:border-2 hover:border-main animate-fade-in" style="animation-delay: 1s;">
+                    <a href="#">
+                        <img src="pictures/P3.jpg" alt="Project 3" class="project-img w-full h-52 object-cover transition-all duration-400 ease-in-out brightness-75 hover:brightness-100 hover:scale-110" onerror="this.onerror=null; this.src='https://placehold.co/600x400/1a1a1a/00ffee?text=Project+3';">
+                        <div class="project-info absolute bottom-0 w-full p-6 bg-black/80 text-left transition-all duration-400 ease-in-out group-hover:bg-black/90">
+                            <h3 class="text-2xl font-semibold mb-2 text-main">Project 3</h3>
+                            <p class="text-sm font-light leading-relaxed mb-4 text-gray-400">A personal portfolio website built to showcase my development skills.</p>
+                            <div class="btn inline-block py-2 px-6 bg-main shadow-lg shadow-main/50 rounded-full text-sm text-black border-2 border-transparent font-semibold transition-all duration-300 ease-in-out cursor-pointer hover:scale-110 hover:bg-black hover:text-main hover:shadow-neon">View Project</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="contact" class="contact min-h-screen py-24 px-[8%] lg:px-[15%] bg-second-bg flex items-center justify-center">
+        <div class="contact-container max-w-4xl mx-auto bg-[#181818] p-8 lg:p-12 rounded-2xl shadow-2xl border border-main/20 animate-fade-in" style="animation-delay: 0.2s;">
+            <h1 class="text-center text-4xl lg:text-5xl font-bold mb-8 text-text uppercase animate-slide-in" style="animation-delay: 0.4s;">Contact <span class="text-main">Me</span></h1>
+            <form action="#" method="POST" class="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required class="w-full p-5 my-4 bg-transparent border-2 border-main rounded-xl text-text text-lg transition-all duration-300 ease-in-out focus:border-text focus:bg-black/20 placeholder:text-gray-400 placeholder:opacity-90 animate-fade-in" style="animation-delay: 0.6s;">
+                <input type="email" name="email" placeholder="Your Email" required class="w-full p-5 my-4 bg-transparent border-2 border-main rounded-xl text-text text-lg transition-all duration-300 ease-in-out focus:border-text focus:bg-black/20 placeholder:text-gray-400 placeholder:opacity-90 animate-fade-in" style="animation-delay: 0.7s;">
+                <textarea name="message" placeholder="Your Message" required class="w-full p-5 my-4 bg-transparent border-2 border-main rounded-xl text-text text-lg transition-all duration-300 ease-in-out focus:border-text focus:bg-black/20 placeholder:text-gray-400 placeholder:opacity-90 h-48 lg:h-64 resize-none animate-fade-in" style="animation-delay: 0.8s;"></textarea>
+                <button type="submit" class="btn w-full p-5 bg-gradient-to-r from-main to-main-dark border-none text-black text-xl font-semibold cursor-pointer rounded-full shadow-lg shadow-main transition-all duration-300 ease-in-out uppercase hover:scale-105 hover:shadow-neon animate-fade-in" style="animation-delay: 0.9s;">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer bg-[#151515] py-12 px-[8%] text-center text-text shadow-inner shadow-black/30">
+        <div class="footer-content max-w-6xl mx-auto">
+            <p class="text-lg text-gray-400 mb-6">Connect with me:</p>
+            <div class="social-icons flex justify-center gap-4 my-6">
+                <a href="https://www.facebook.com" class="inline-flex justify-center items-center w-10 h-10 bg-transparent border-2 border-main rounded-full text-main transition-all duration-300 ease-in-out hover:text-black hover:scale-110 hover:shadow-neon hover:bg-main"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com" class="inline-flex justify-center items-center w-10 h-10 bg-transparent border-2 border-main rounded-full text-main transition-all duration-300 ease-in-out hover:text-black hover:scale-110 hover:shadow-neon hover:bg-main"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com" class="inline-flex justify-center items-center w-10 h-10 bg-transparent border-2 border-main rounded-full text-main transition-all duration-300 ease-in-out hover:text-black hover:scale-110 hover:shadow-neon hover:bg-main"><i class="fab fa-tiktok"></i></a>
+                <a href="https://github.com" class="inline-flex justify-center items-center w-10 h-10 bg-transparent border-2 border-main rounded-full text-main transition-all duration-300 ease-in-out hover:text-black hover:scale-110 hover:shadow-neon hover:bg-main"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="text-sm text-gray-500 mt-4">&copy; 2024 Rhealyn Vasquez. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const navbar = document.querySelector('.navbar');
+
+        menuIcon.addEventListener('click', () => {
+            navbar.classList.toggle('hidden');
+            menuIcon.classList.toggle('close');
+        });
+
+        const navLinks = document.querySelectorAll('.navbar a');
+        const sections = document.querySelectorAll('section');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault(); 
+                
+                if (window.innerWidth < 1024) { 
+                    navbar.classList.add('hidden');
+                    menuIcon.classList.remove('close');
+                }
+                
+                navLinks.forEach(a => a.classList.remove('active'));
+                link.classList.add('active');
+
+                const targetId = link.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 80, 
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 90; 
+                if (pageYOffset >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        const animateElements = document.querySelectorAll('.animate-fade-in, .animate-slide-in');
+        const generalObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                    generalObserver.unobserve(entry.target); 
+                }
+            });
+        }, { threshold: 0.1 }); 
+
+        animateElements.forEach(el => {
+            el.style.animationPlayState = 'paused'; 
+            generalObserver.observe(el);
+        });
+
+        const skillsContainer = document.getElementById('skills-container-animated');
+        
+        const skillsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    skillsContainer.classList.add('skills-animated');
+                    skillsObserver.unobserve(skillsContainer);
+                }
+            });
+        }, { threshold: 0.3 }); 
+
+        if (skillsContainer) {
+            skillsObserver.observe(skillsContainer);
+        }
+    </script>
+</body>
+</html>
